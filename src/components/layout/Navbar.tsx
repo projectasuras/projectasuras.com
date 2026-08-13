@@ -13,7 +13,7 @@ const navLinks = [
   { label: 'Training', to: '/services#training-courses' },
   { label: 'About', to: '/about' },
   { label: 'Case Studies', to: '/case-studies' },
-  { label: 'Blog', to: '/blog' },
+  { label: 'Blog', to: 'https://blog.projectasuras.com' },
   { label: 'Contact', to: '/contact' },
 ];
 
