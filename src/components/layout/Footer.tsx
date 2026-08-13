@@ -142,7 +142,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-slate-100">Stay Informed</h3>
+            {/* <h3 className="text-sm font-semibold text-slate-100">Stay Informed</h3>
             <p className="mt-4 text-sm text-slate-400">
               Threat research and product updates, no spam. Unsubscribe anytime.
             </p>
@@ -182,7 +182,7 @@ export function Footer() {
             </form>
             {mutation.isSuccess && (
               <p className="mt-2 text-xs text-emerald-400">You're subscribed. Welcome aboard.</p>
-            )}
+            )} */}
           </div>
         </div>
 

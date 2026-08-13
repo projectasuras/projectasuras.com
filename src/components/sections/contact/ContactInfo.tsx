@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { LinkedinIcon, XIcon, GithubIcon } from '@/components/shared/SocialIcons';
+import { LinkedinIcon, XIcon, GithubIcon, DockerIcon, InstagramIcon, YoutubeIcon, DiscordIcon } from '@/components/shared/SocialIcons';
 
 const items = [
   { icon: Mail, label: 'Email', value: 'contact@projectasuras.com', href: 'mailto:contact@projectasuras.com' },
@@ -40,31 +40,67 @@ export function ContactInfo() {
 
       <div className="mt-10 flex gap-3">
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/projectasuras"
           target="_blank"
           rel="noreferrer"
           aria-label="Project Asuras on LinkedIn"
-          className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900 text-slate-400 hover:text-cyan-400"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
         >
           <LinkedinIcon className="h-4 w-4" />
         </a>
         <a
-          href="https://x.com"
+          href="https://twitter.com/projectasuras"
           target="_blank"
           rel="noreferrer"
           aria-label="Project Asuras on X"
-          className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900 text-slate-400 hover:text-cyan-400"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
         >
           <XIcon className="h-4 w-4" />
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/projectasuras"
           target="_blank"
           rel="noreferrer"
           aria-label="Project Asuras on GitHub"
-          className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900 text-slate-400 hover:text-cyan-400"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
         >
           <GithubIcon className="h-4 w-4" />
+        </a>
+        <a
+          href="https://discord.com/invite/pS7t73XTDK"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Project Asuras on Discord"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+        >
+          <DiscordIcon className="h-4 w-4" />
+        </a>
+        <a
+          href="https://www.youtube.com/@projectasuras"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Project Asuras on YouTube"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+        >
+          <YoutubeIcon className="h-4 w-4" />
+        </a>
+        <a
+          href="https://www.instagram.com/projectasuras/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Project Asuras on Instagram"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+        >
+          <InstagramIcon className="h-4 w-4" />
+        </a>
+        <a
+          href="https://hub.docker.com/u/projectasuras"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Project Asuras on Docker Hub"
+          className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+        >
+          <DockerIcon className="h-4 w-4" />
         </a>
       </div>
     </div>
