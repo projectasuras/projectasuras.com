@@ -7,15 +7,15 @@ import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
 const universityCourses = [
-  { title: 'Offensive Security Fundamentals', duration: '14 weeks', level: 'Beginner', format: 'Semester Course' },
-  { title: 'Applied Cryptography Lab', duration: '10 weeks', level: 'Intermediate', format: 'Semester Course' },
-  { title: 'Capstone: Live-Fire Red Team', duration: '6 weeks', level: 'Advanced', format: 'Lab Intensive' },
+  { title: 'Cybersecurity Workshop', duration: '2-7 days', level: 'Beginner', format: 'Workshop' },
+  { title: 'Offensive Security Fundamentals', duration: '14 weeks', level: 'Intermediate', format: 'Semester Course' },
+  { title: 'Capstone: Live-Fire Red Team', duration: '2 weeks', level: 'Advanced', format: 'Lab Intensive' },
 ];
 
 const corporateCourses = [
   { title: 'Executive Threat Briefing', duration: 'Half-day', level: 'All Levels', format: 'Workshop' },
-  { title: 'Phishing Simulation Program', duration: 'Ongoing', level: 'All Levels', format: 'Managed Service' },
-  { title: 'Incident Response Tabletop', duration: 'Full-day', level: 'Intermediate', format: 'Tabletop Exercise' },
+  { title: 'Applied Penetration Testing', duration: '3 Days', level: 'Intermediate', format: 'Workshop' },
+  { title: 'Offensive Security Hands-on Labs', duration: '7 Days', level: 'Intermediate', format: 'Lab Intensive' },
 ];
 
 export function TrainingSection() {
@@ -95,9 +95,9 @@ export function TrainingSection() {
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-4">
-          <Button variant="secondary" leftIcon={<Download className="h-4 w-4" />}>
+          {/* <Button variant="secondary" leftIcon={<Download className="h-4 w-4" />}>
             Download Course Catalog
-          </Button>
+          </Button> */}
           <Link to="/contact" className="text-sm text-cyan-400 hover:underline">
             Or talk to our training team →
           </Link>

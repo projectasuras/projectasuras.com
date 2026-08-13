@@ -42,10 +42,10 @@ export function ProductsSection() {
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-400">
             We're distilling thousands of hours of offensive engagement data into a new class of
-            security tooling. Details are under wraps — but early access is not.
+            security tooling. Details are under wraps. Stay Tuned!
           </p>
 
-          {mutation.isSuccess ? (
+          {/* {mutation.isSuccess ? (
             <div className="mx-auto mt-8 flex max-w-md items-center justify-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-400">
               <CheckCircle2 className="h-4 w-4" />
               You're on the list. We'll be in touch.
@@ -73,7 +73,7 @@ export function ProductsSection() {
                 Join Waitlist
               </Button>
             </form>
-          )}
+          )} */}
         </FadeIn>
       </div>
     </section>
