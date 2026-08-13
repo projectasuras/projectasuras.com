@@ -27,6 +27,7 @@
     "react-router-dom": "^7.18.2",
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1",
+    "simple-icons": "^16.28.0",
     "tailwind-merge": "^3.6.0",
     "zod": "^4.4.3"
   },

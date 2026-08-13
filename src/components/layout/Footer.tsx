@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Loader2, CheckCircle2 } from 'lucide-react';
-import { LinkedinIcon, XIcon, GithubIcon } from '@/components/shared/SocialIcons';
+import { LinkedinIcon, XIcon, GithubIcon, DiscordIcon, YoutubeIcon, MediumIcon, InstagramIcon, DockerIcon } from '@/components/shared/SocialIcons';
 import { useMutation } from '@tanstack/react-query';
 import { submitNewsletter } from '@/lib/api';
 
@@ -14,7 +14,7 @@ const serviceLinks = [
 
 const resourceLinks = [
   { label: 'Case Studies', to: '/case-studies' },
-  { label: 'Blog', to: '/blog' },
+  { label: 'Blog', to: 'https://blog.projectasuras.com' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -42,9 +42,9 @@ export function Footer() {
               Offensive security, training, and custom tooling for teams who refuse to be the
               easy target.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/projectasuras"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Project Asuras on LinkedIn"
@@ -53,7 +53,7 @@ export function Footer() {
                 <LinkedinIcon className="h-4 w-4" />
               </a>
               <a
-                href="https://x.com"
+                href="https://twitter.com/projectasuras"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Project Asuras on X"
@@ -62,13 +62,49 @@ export function Footer() {
                 <XIcon className="h-4 w-4" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/projectasuras"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Project Asuras on GitHub"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
               >
                 <GithubIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://discord.com/invite/pS7t73XTDK"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Project Asuras on Discord"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+              >
+                <DiscordIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.youtube.com/@projectasuras"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Project Asuras on YouTube"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+              >
+                <YoutubeIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/projectasuras/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Project Asuras on Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+              >
+                <InstagramIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://hub.docker.com/u/projectasuras"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Project Asuras on Docker Hub"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-400 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400"
+              >
+                <DockerIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
