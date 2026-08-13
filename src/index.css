@@ -1,0 +1,176 @@
+@import 'highlight.js/styles/github-dark.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Theme-aware color scales.
+ *
+ * Every `slate-*` / `cyan-*` / `emerald-*` / `rose-*` utility class in this
+ * project (bg-slate-900, text-cyan-400, border-rose-500/30, ...) resolves
+ * through these custom properties (wired up in tailwind.config.js) instead of
+ * static hex values. The dark-mode-first palette below is the source of
+ * truth; the `:root` block is that same palette mirrored around its middle
+ * shade (50<->950, 100<->900, ..., 500 stays put) so surfaces/text swap sides
+ * correctly in light mode without touching component classes.
+ */
+@layer base {
+  :root {
+    --slate-50: 2 6 23;
+    --slate-100: 15 23 42;
+    --slate-200: 30 41 59;
+    --slate-300: 51 65 85;
+    --slate-400: 71 85 105;
+    --slate-500: 100 116 139;
+    --slate-600: 148 163 184;
+    --slate-700: 203 213 225;
+    --slate-800: 226 232 240;
+    --slate-900: 241 245 249;
+    --slate-950: 248 250 252;
+
+    --cyan-50: 44 6 0;
+    --cyan-100: 71 10 1;
+    --cyan-200: 95 13 1;
+    --cyan-300: 125 18 1;
+    --cyan-400: 156 23 1;
+    --cyan-500: 182 26 1;
+    --cyan-600: 240 112 74;
+    --cyan-700: 247 150 122;
+    --cyan-800: 251 192 176;
+    --cyan-900: 253 225 218;
+    --cyan-950: 254 242 239;
+
+    --emerald-50: 2 44 34;
+    --emerald-100: 6 78 59;
+    --emerald-200: 6 95 70;
+    --emerald-300: 4 120 87;
+    --emerald-400: 5 150 105;
+    --emerald-500: 16 185 129;
+    --emerald-600: 52 211 153;
+    --emerald-700: 110 231 183;
+    --emerald-800: 167 243 208;
+    --emerald-900: 209 250 229;
+    --emerald-950: 236 253 245;
+
+    --rose-50: 76 5 25;
+    --rose-100: 136 19 55;
+    --rose-200: 159 18 57;
+    --rose-300: 190 18 60;
+    --rose-400: 225 29 72;
+    --rose-500: 244 63 94;
+    --rose-600: 251 113 133;
+    --rose-700: 253 164 175;
+    --rose-800: 254 205 211;
+    --rose-900: 255 228 230;
+    --rose-950: 255 241 242;
+  }
+
+  .dark {
+    --slate-50: 248 250 252;
+    --slate-100: 241 245 249;
+    --slate-200: 226 232 240;
+    --slate-300: 203 213 225;
+    --slate-400: 148 163 184;
+    --slate-500: 100 116 139;
+    --slate-600: 71 85 105;
+    --slate-700: 51 65 85;
+    --slate-800: 30 41 59;
+    --slate-900: 15 23 42;
+    --slate-950: 2 6 23;
+
+    --cyan-50: 254 242 239;
+    --cyan-100: 253 225 218;
+    --cyan-200: 251 192 176;
+    --cyan-300: 247 150 122;
+    --cyan-400: 240 112 74;
+    --cyan-500: 182 26 1;
+    --cyan-600: 156 23 1;
+    --cyan-700: 125 18 1;
+    --cyan-800: 95 13 1;
+    --cyan-900: 71 10 1;
+    --cyan-950: 44 6 0;
+
+    --emerald-50: 236 253 245;
+    --emerald-100: 209 250 229;
+    --emerald-200: 167 243 208;
+    --emerald-300: 110 231 183;
+    --emerald-400: 52 211 153;
+    --emerald-500: 16 185 129;
+    --emerald-600: 5 150 105;
+    --emerald-700: 4 120 87;
+    --emerald-800: 6 95 70;
+    --emerald-900: 6 78 59;
+    --emerald-950: 2 44 34;
+
+    --rose-50: 255 241 242;
+    --rose-100: 255 228 230;
+    --rose-200: 254 205 211;
+    --rose-300: 253 164 175;
+    --rose-400: 251 113 133;
+    --rose-500: 244 63 94;
+    --rose-600: 225 29 72;
+    --rose-700: 190 18 60;
+    --rose-800: 159 18 57;
+    --rose-900: 136 19 55;
+    --rose-950: 76 5 25;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-50;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  ::selection {
+    @apply bg-cyan-500/30 text-inherit;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-cyan-500 ring-offset-2 ring-offset-slate-950;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .container-app {
+    @apply mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-slate-900/60 backdrop-blur-md border border-slate-800/80;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-cyan-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold;
+  }
+}

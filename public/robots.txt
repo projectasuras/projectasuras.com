@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://projectasuras.com/sitemap.xml

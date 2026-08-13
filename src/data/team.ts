@@ -1,0 +1,56 @@
+import type { TeamMember } from '@/types';
+
+export const team: TeamMember[] = [
+  {
+    id: 'm1',
+    name: 'Ravi Subramanian',
+    role: 'Founder & CEO',
+    bio: 'Former red team lead with 15 years breaking into critical infrastructure. Built Asuras to close the gap between offensive research and enterprise defense.',
+    image: 'https://i.pravatar.cc/320?img=13',
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    id: 'm2',
+    name: 'Sofia Reyes',
+    role: 'Chief Technology Officer',
+    bio: 'Leads detection engineering and product development. Previously built security automation platforms for two Fortune 500 companies.',
+    image: 'https://i.pravatar.cc/320?img=48',
+    linkedin: '#',
+    github: '#',
+  },
+  {
+    id: 'm3',
+    name: 'Daniel Kim',
+    role: 'Head of Offensive Security',
+    bio: 'OSCE3-certified operator specializing in cloud and Active Directory attack paths. Regular CTF competitor and conference speaker.',
+    image: 'https://i.pravatar.cc/320?img=14',
+    linkedin: '#',
+    github: '#',
+  },
+  {
+    id: 'm4',
+    name: 'Priya Nair',
+    role: 'Director of Training',
+    bio: 'Designs university and corporate curricula, translating offensive research into hands-on learning that sticks.',
+    image: 'https://i.pravatar.cc/320?img=47',
+    linkedin: '#',
+  },
+  {
+    id: 'm5',
+    name: 'Tomás Almeida',
+    role: 'Principal Security Engineer',
+    bio: 'Builds the internal tooling and lab infrastructure that powers every engagement and training environment we run.',
+    image: 'https://i.pravatar.cc/320?img=15',
+    github: '#',
+  },
+  {
+    id: 'm6',
+    name: 'Hana Suzuki',
+    role: 'VP of Client Delivery',
+    bio: 'Ensures every engagement translates into a report executives act on, not a PDF that gathers dust.',
+    image: 'https://i.pravatar.cc/320?img=44',
+    linkedin: '#',
+    twitter: '#',
+  },
+];
