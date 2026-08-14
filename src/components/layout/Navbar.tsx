@@ -11,10 +11,10 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { label: 'Services', to: '/services' },
   { label: 'Training', to: '/training' },
-  { label: 'About', to: '/about' },
   { label: 'Case Studies', to: '/case-studies' },
   { label: 'Blog', to: 'https://blog.projectasuras.com' },
   { label: 'Contact', to: '/contact' },
+  { label: 'About', to: '/about' },
 ];
 
 export function Navbar() {
