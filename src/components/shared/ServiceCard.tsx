@@ -61,10 +61,10 @@ export function ServiceCard({
           </ul>
         )}
 
-        <div className="mt-6 flex items-center gap-1.5 text-sm font-semibold text-cyan-400">
+        {/* <div className="mt-6 flex items-center gap-1.5 text-sm font-semibold text-cyan-400">
           {comingSoon ? 'Join the waitlist' : 'Learn more'}
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </div>
+        </div> */}
       </Link>
     </motion.div>
   );

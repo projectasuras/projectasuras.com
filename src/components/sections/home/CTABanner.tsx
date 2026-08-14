@@ -4,6 +4,7 @@ import { CheckCircle2 } from 'lucide-react';
 import { submitNewsletter } from '@/lib/api';
 import { Button } from '@/components/ui/Button';
 import { FadeIn } from '@/components/shared/FadeIn';
+import { Link } from 'react-router-dom';
 
 export function CTABanner() {
   const [email, setEmail] = useState('');
@@ -37,11 +38,10 @@ export function CTABanner() {
             Ready to Secure Your Infrastructure?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/90">
-            Talk to our team about a tailored assessment, or subscribe for threat research
-            straight to your inbox.
+            Talk to our team about a tailored assessment.
           </p>
 
-          <form
+          {/* <form
             onSubmit={(e) => {
               e.preventDefault();
               if (email) mutation.mutate({ email });
@@ -75,7 +75,17 @@ export function CTABanner() {
                 'Get Started'
               )}
             </Button>
-          </form>
+          </form> */}
+          <Link to="/contact">
+            <Button
+              type="button"
+              size="md"
+              className="shrink-0 bg-zinc-950 text-white hover:bg-zinc-800"
+            >
+              Contact Us
+            </Button>
+          </Link>
+
         </FadeIn>
       </div>
     </section>

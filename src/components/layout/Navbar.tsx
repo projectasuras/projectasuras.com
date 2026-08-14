@@ -9,6 +9,7 @@ import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
+  { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
   { label: 'Training', to: '/training' },
   { label: 'Case Studies', to: '/case-studies' },

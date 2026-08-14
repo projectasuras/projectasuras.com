@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { HeroSection } from '@/components/sections/home/HeroSection';
-import { TrustBar } from '@/components/sections/home/TrustBar';
+// import { TrustBar } from '@/components/sections/home/TrustBar';
 import { ServicesGrid } from '@/components/sections/home/ServicesGrid';
 import { StatsSection } from '@/components/sections/home/StatsSection';
 import { WhyChooseUs } from '@/components/sections/home/WhyChooseUs';
@@ -36,7 +36,7 @@ export default function Home() {
       </Helmet>
 
       <HeroSection />
-      <TrustBar />
+      {/* <TrustBar /> */}
       <ServicesGrid />
       <StatsSection />
       <WhyChooseUs />
