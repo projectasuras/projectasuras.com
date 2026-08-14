@@ -20,7 +20,7 @@ export function ServicesGrid() {
               description={service.shortDescription}
               features={service.features}
               comingSoon={service.comingSoon}
-              link={service.comingSoon ? '/services#products' : `/services#${service.slug}`}
+              link={service.comingSoon ? '/services#products' : service.slug === 'training-courses' ? '/training' : `/services#${service.slug}`}
               index={i}
             />
           ))}

@@ -84,7 +84,7 @@ Generic "you've won a prize" templates train employees to spot bad phishing, not
 
 A simulation without immediate, contextual feedback is close to useless. The moment someone clicks, they should land on a two-minute explainer specific to the pretext they fell for — not a generic "you failed" page.
 
-Curious what a tailored phishing program looks like for your org? Our [Corporate Training track](/services#training-courses) builds these end to end.`,
+Curious what a tailored phishing program looks like for your org? Our [Corporate Training track](/training) builds these end to end.`,
   },
   {
     slug: 'mobile-app-pentest-checklist-2026',

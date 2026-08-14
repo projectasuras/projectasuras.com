@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { PageHero } from '@/components/shared/PageHero';
 import { PentestSection } from '@/components/sections/services/PentestSection';
-import { TrainingSection } from '@/components/sections/services/TrainingSection';
+
 import { SoftwareDevSection } from '@/components/sections/services/SoftwareDevSection';
 import { ProductsSection } from '@/components/sections/services/ProductsSection';
 
@@ -28,7 +28,7 @@ export default function Services() {
         breadcrumb="Services"
       />
       <PentestSection />
-      <TrainingSection />
+
       <SoftwareDevSection />
       <ProductsSection />
     </>

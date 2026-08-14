@@ -7,7 +7,7 @@ import { submitNewsletter } from '@/lib/api';
 
 const serviceLinks = [
   { label: 'Penetration Testing', to: '/services#penetration-testing' },
-  { label: 'Training & Courses', to: '/services#training-courses' },
+  { label: 'Training & Courses', to: '/training' },
   { label: 'Software Development', to: '/services#software-development' },
   { label: 'Products', to: '/services#products' },
 ];

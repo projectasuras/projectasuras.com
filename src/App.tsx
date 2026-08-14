@@ -7,6 +7,7 @@ import { CookieBanner } from '@/components/layout/CookieBanner';
 
 const Home = lazy(() => import('@/pages/Home'));
 const Services = lazy(() => import('@/pages/Services'));
+const Training = lazy(() => import('@/pages/Training'));
 const About = lazy(() => import('@/pages/About'));
 const CaseStudies = lazy(() => import('@/pages/CaseStudies'));
 const CaseStudyDetail = lazy(() => import('@/pages/CaseStudyDetail'));
@@ -53,6 +54,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/training" element={<Training />} />
             <Route path="/about" element={<About />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
