@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { PageHero } from '@/components/shared/PageHero';
 import { MissionSection } from '@/components/sections/about/MissionSection';
-import { TeamSection } from '@/components/sections/about/TeamSection';
-import { Timeline } from '@/components/sections/about/Timeline';
-import { Certifications } from '@/components/sections/about/Certifications';
+// import { TeamSection } from '@/components/sections/about/TeamSection';
+// import { Timeline } from '@/components/sections/about/Timeline';
+// import { Certifications } from '@/components/sections/about/Certifications';
 
 export default function About() {
   return (
@@ -23,9 +23,9 @@ export default function About() {
         breadcrumb="About"
       />
       <MissionSection />
-      <TeamSection />
+      {/* <TeamSection />
       <Timeline />
-      <Certifications />
+      <Certifications /> */}
     </>
   );
 }
