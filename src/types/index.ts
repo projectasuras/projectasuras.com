@@ -13,10 +13,8 @@ export interface Service {
 export interface Testimonial {
   id: string;
   quote: string;
-  author: string;
-  role: string;
   company: string;
-  image: string;
+  logo: string;
 }
 
 export interface CaseStudy {
