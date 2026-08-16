@@ -5,7 +5,7 @@ import { ServicesGrid } from '@/components/sections/home/ServicesGrid';
 import { StatsSection } from '@/components/sections/home/StatsSection';
 import { WhyChooseUs } from '@/components/sections/home/WhyChooseUs';
 import { TestimonialsSection } from '@/components/sections/home/TestimonialsSection';
-import { BlogPreview } from '@/components/sections/home/BlogPreview';
+// import { BlogPreview } from '@/components/sections/home/BlogPreview';
 import { CTABanner } from '@/components/sections/home/CTABanner';
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
       <StatsSection />
       <WhyChooseUs />
       <TestimonialsSection />
-      <BlogPreview />
+      {/* <BlogPreview /> */}
       <CTABanner />
     </>
   );

@@ -13,7 +13,7 @@ const serviceLinks = [
 ];
 
 const resourceLinks = [
-  { label: 'Case Studies', to: '/case-studies' },
+  // { label: 'Case Studies', to: '/case-studies' },
   { label: 'Blog', to: 'https://blog.projectasuras.com' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact', to: '/contact' },

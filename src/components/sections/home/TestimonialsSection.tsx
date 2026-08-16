@@ -67,9 +67,8 @@ export function TestimonialsSection() {
                   type="button"
                   onClick={() => setIndex(i)}
                   aria-label={`Go to testimonial ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i === index ? 'w-6 bg-cyan-500' : 'w-2 bg-slate-700'
-                  }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${i === index ? 'w-6 bg-cyan-500' : 'w-2 bg-slate-700'
+                    }`}
                 />
               ))}
             </div>
