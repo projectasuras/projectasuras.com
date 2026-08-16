@@ -12,7 +12,7 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
   { label: 'Training', to: '/training' },
-  { label: 'Case Studies', to: '/case-studies' },
+  // { label: 'Case Studies', to: '/case-studies' },
   { label: 'Blog', to: 'https://blog.projectasuras.com' },
   { label: 'Contact', to: '/contact' },
   { label: 'About', to: '/about' },
