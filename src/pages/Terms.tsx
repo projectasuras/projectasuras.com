@@ -1,16 +1,31 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { PageHero } from '@/components/shared/PageHero';
 
 export default function Terms() {
+  const termsSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Terms of Service | Project Asuras',
+    description:
+      'Terms of Service for Project Asuras. Read the terms governing our cybersecurity consulting, penetration testing, and software development engagements in India.',
+    url: 'https://projectasuras.com/terms',
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Terms of Service | Project Asuras</title>
-        <meta
-          name="description"
-          content="Terms of Service for Project Asuras. Read the terms governing our cybersecurity services and engagements in India."
-        />
-      </Helmet>
+      <SEO
+        title="Terms of Service & Rules of Engagement | Project Asuras"
+        description="Terms of Service and Rules of Engagement for Project Asuras. Read the legal terms governing our offensive security engagements, confidentiality, and technical assessments."
+        canonical="/terms"
+        keywords={[
+          'Project Asuras terms of service',
+          'rules of engagement cybersecurity',
+          'penetration testing agreement',
+          'security assessment NDA',
+          'Indian Contract Act cybersecurity',
+        ]}
+        schema={termsSchema}
+      />
 
       <PageHero
         eyebrow="Legal"

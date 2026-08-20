@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { ArrowRight, CheckCircle2, Quote } from 'lucide-react';
 import { getCaseStudyBySlug, caseStudies } from '@/data/caseStudies';
 import { FadeIn } from '@/components/shared/FadeIn';
@@ -13,12 +13,44 @@ export default function CaseStudyDetail() {
 
   const related = caseStudies.filter((c) => c.slug !== caseStudy.slug).slice(0, 3);
 
+  const detailSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: caseStudy.title,
+    description: caseStudy.excerpt,
+    image: caseStudy.image.startsWith('http')
+      ? caseStudy.image
+      : `https://projectasuras.com${caseStudy.image}`,
+    author: {
+      '@type': 'Organization',
+      name: 'Project Asuras',
+      url: 'https://projectasuras.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Project Asuras',
+      logo: 'https://projectasuras.com/images/dark-logo.png',
+    },
+  };
+
   return (
     <>
-      <Helmet>
-        <title>{caseStudy.title} | Project Asuras Case Studies</title>
-        <meta name="description" content={caseStudy.excerpt} />
-      </Helmet>
+      <SEO
+        title={`${caseStudy.title} | Case Study`}
+        description={caseStudy.excerpt}
+        canonical={`/case-studies/${caseStudy.slug}`}
+        ogType="article"
+        ogImage={caseStudy.image}
+        ogImageAlt={caseStudy.title}
+        keywords={[
+          caseStudy.industry,
+          caseStudy.clientName,
+          'cybersecurity case study',
+          'penetration testing outcome',
+          'security review',
+        ]}
+        schema={detailSchema}
+      />
 
       <section className="relative overflow-hidden border-b border-slate-800/80 pt-[72px]">
         <div className="absolute inset-0">

@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { PageHero } from '@/components/shared/PageHero';
 import { ExecutiveSummary } from '@/components/sections/about/ExecutiveSummary';
 import { CorePillars } from '@/components/sections/about/CorePillars';
@@ -7,42 +7,43 @@ import { EngagementModels } from '@/components/sections/about/EngagementModels';
 import { AboutCTA } from '@/components/sections/about/AboutCTA';
 
 export default function About() {
+  const aboutSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'Project Asuras',
+      url: 'https://projectasuras.com',
+      description:
+        'India-based cybersecurity and technology intelligence firm focused on building cutting-edge cybersecurity and AI-driven security products, delivering offensive security research, and technical enablement.',
+      knowsAbout: [
+        'Cyber Security',
+        'AI Product Engineering',
+        'Attack Surface Management',
+        'Offensive Security Research',
+        'DevSecOps',
+        'Vulnerability Assessment',
+        'Red Teaming',
+      ],
+    },
+  };
+
   return (
     <>
-      <Helmet>
-        <title>About Us | Project Asuras - Cyber Security, AI &amp; Software Intelligence</title>
-        <meta
-          name="description"
-          content="Project Asuras is an India-based cybersecurity and technology intelligence firm focused on AI-driven security products, offensive security research, and empowering engineers through robust defensive strategies."
-        />
-        <meta
-          property="og:title"
-          content="About Project Asuras | Defending Modern Infrastructure & Next-Gen Cyber Intelligence"
-        />
-        <meta
-          property="og:description"
-          content="Bridging the gap between software deployment, architectural design, and strict security best practices through AI product engineering and offensive research."
-        />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Project Asuras',
-            url: 'https://projectasuras.com',
-            description:
-              'India-based cybersecurity and technology intelligence firm focused on building cutting-edge cybersecurity and AI-driven security products, delivering offensive security research, and technical enablement.',
-            knowsAbout: [
-              'Cyber Security',
-              'AI Product Engineering',
-              'Attack Surface Management',
-              'Offensive Security Research',
-              'DevSecOps',
-              'Vulnerability Assessment',
-            ],
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="About Us | Project Asuras - Cyber Security, AI & Software Intelligence"
+        description="Project Asuras is an India-based cybersecurity and technology intelligence firm focused on AI-driven security products, offensive security research, and empowering engineers through robust defensive strategies."
+        canonical="/about"
+        keywords={[
+          'about Project Asuras',
+          'cybersecurity intelligence firm',
+          'AI security engineering',
+          'offensive security researchers India',
+          'vulnerability research team',
+          'DevSecOps consulting',
+        ]}
+        schema={aboutSchema}
+      />
 
       <PageHero
         eyebrow="ABOUT PROJECT ASURAS"

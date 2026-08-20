@@ -1,17 +1,32 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { PageHero } from '@/components/shared/PageHero';
 import { ContactInfo } from '@/components/sections/contact/ContactInfo';
 
 export default function Contact() {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Project Asuras',
+    description:
+      'Get in touch with Project Asuras for offensive security assessments, penetration testing, corporate training, and custom security software.',
+    url: 'https://projectasuras.com/contact',
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Contact | Project Asuras</title>
-        <meta
-          name="description"
-          content="Get in touch with Project Asuras for penetration testing, training, or custom security software."
-        />
-      </Helmet>
+      <SEO
+        title="Contact Security Specialists | Project Asuras"
+        description="Get in touch with Project Asuras for expert penetration testing, hands-on training programs, or custom security software engineering. Schedule an engagement today."
+        canonical="/contact"
+        keywords={[
+          'contact Project Asuras',
+          'hire penetration testers',
+          'request security quote',
+          'cybersecurity consultation India',
+          'contact security team',
+        ]}
+        schema={contactSchema}
+      />
 
       <PageHero
         eyebrow="Get in Touch"

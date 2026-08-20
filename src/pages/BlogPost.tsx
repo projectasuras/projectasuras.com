@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
@@ -20,24 +20,51 @@ export default function BlogPost() {
   const related = getRelatedPosts(post.slug, 3);
   const shareUrl = `https://projectasuras.com/blog/${post.slug}`;
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    image: post.image.startsWith('http')
+      ? post.image
+      : `https://projectasuras.com${post.image}`,
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+      jobTitle: post.author.role,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Project Asuras',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://projectasuras.com/images/dark-logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': shareUrl,
+    },
+    keywords: post.tags?.join(', '),
+    articleSection: post.category,
+  };
+
   return (
     <>
-      <Helmet>
-        <title>{post.title} | Project Asuras Blog</title>
-        <meta name="description" content={post.excerpt} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:type" content="article" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: post.title,
-            datePublished: post.publishedAt,
-            author: { '@type': 'Person', name: post.author.name },
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title={`${post.title} | Project Asuras Blog`}
+        description={post.excerpt}
+        canonical={`/blog/${post.slug}`}
+        ogType="article"
+        ogImage={post.image}
+        ogImageAlt={post.title}
+        publishedTime={post.publishedAt}
+        author={post.author.name}
+        keywords={post.tags}
+        schema={articleSchema}
+      />
 
       <article className="pt-[72px]">
         <div className="relative h-[45vh] min-h-[320px] w-full overflow-hidden">

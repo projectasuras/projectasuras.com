@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { Search } from 'lucide-react';
 import { PageHero } from '@/components/shared/PageHero';
 import { BlogCard } from '@/components/sections/blog/BlogCard';
@@ -39,15 +39,36 @@ export default function Blog() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Project Asuras Security Research & Insights',
+    description:
+      'Threat research, detection engineering, offensive security tactics, and technical deep dives by the Project Asuras team.',
+    url: 'https://projectasuras.com/blog',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Project Asuras',
+      logo: 'https://projectasuras.com/images/dark-logo.png',
+    },
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Blog | Project Asuras</title>
-        <meta
-          name="description"
-          content="Threat research, detection engineering, and security training insights from the Project Asuras team."
-        />
-      </Helmet>
+      <SEO
+        title="Security Research & Threat Intelligence Blog | Project Asuras"
+        description="Threat research, vulnerability analysis, detection engineering, and cybersecurity training insights from the Project Asuras offensive research team."
+        canonical="/blog"
+        keywords={[
+          'cybersecurity blog',
+          'threat research',
+          'vulnerability analysis',
+          'detection engineering',
+          'offensive security articles',
+          'security insights',
+        ]}
+        schema={blogSchema}
+      />
 
       <PageHero
         eyebrow="Research & Insights"

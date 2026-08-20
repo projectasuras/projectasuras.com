@@ -1,16 +1,31 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { PageHero } from '@/components/shared/PageHero';
 
 export default function Privacy() {
+  const privacySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Privacy Policy | Project Asuras',
+    description:
+      'Privacy Policy for Project Asuras, outlining our commitment to data protection under Indian laws including the IT Act 2000 and SPDI Rules 2011.',
+    url: 'https://projectasuras.com/privacy',
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | Project Asuras</title>
-        <meta
-          name="description"
-          content="Privacy Policy for Project Asuras, outlining our commitment to data protection under Indian laws including the IT Act 2000."
-        />
-      </Helmet>
+      <SEO
+        title="Privacy Policy | Project Asuras"
+        description="Privacy Policy for Project Asuras, outlining our commitment to data protection under Indian cyber laws including the IT Act 2000, SPDI Rules 2011, and CERT-In guidelines."
+        canonical="/privacy"
+        keywords={[
+          'Project Asuras privacy policy',
+          'data protection India',
+          'IT Act 2000 compliance',
+          'SPDI rules',
+          'CERT-In compliance',
+        ]}
+        schema={privacySchema}
+      />
 
       <PageHero
         eyebrow="Legal"

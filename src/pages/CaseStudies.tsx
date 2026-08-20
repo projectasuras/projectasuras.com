@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/shared/SEO';
 import { PageHero } from '@/components/shared/PageHero';
 import { FilterBar } from '@/components/sections/case-studies/FilterBar';
 import type { CaseStudyFilter } from '@/components/sections/case-studies/FilterBar';
@@ -14,15 +14,30 @@ export default function CaseStudies() {
     [filter],
   );
 
+  const caseStudiesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Case Studies & Security Engagement Outcomes',
+    description:
+      'Real-world case studies detailing how Project Asuras identified vulnerabilities, hardened infrastructure, and secured client systems.',
+    url: 'https://projectasuras.com/case-studies',
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Case Studies | Project Asuras</title>
-        <meta
-          name="description"
-          content="Real engagements, real results — case studies from Project Asuras across finance, healthcare, education, and technology."
-        />
-      </Helmet>
+      <SEO
+        title="Client Case Studies & Security Impact | Project Asuras"
+        description="Real engagements, real results — explore technical case studies detailing how Project Asuras uncovered critical vulnerabilities across finance, healthcare, and enterprise tech."
+        canonical="/case-studies"
+        keywords={[
+          'cybersecurity case studies',
+          'penetration test case study',
+          'security engagement results',
+          'vulnerability remediation examples',
+          'red team case studies',
+        ]}
+        schema={caseStudiesSchema}
+      />
 
       <PageHero
         eyebrow="Proof of Work"
